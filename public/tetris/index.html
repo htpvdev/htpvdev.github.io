@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>TETRIS</title>
+  <link rel="stylesheet" href="css/tetris.css">
+</head>
+<body>
+<!-- YouTube-Akichonプログラミング講座-テトリスを作る -->
+<!-- <h1>TETRIS</h1> -->
+
+<main>
+  <ul id="game">
+    <li id="hldbox">
+      <canvas id="hld"></canvas>
+      <h2>HOLDED<br>BLOCK</h2>
+      <canvas id="scrbrd"></canvas>
+      <h2>SCORE</h2><br><br>
+      <a href="index.html" id="rldbtn">リセット</a>
+    </li>
+    <li id="canbox"><canvas id="can"></canvas></li>
+      <li id="nxtbox">
+        <canvas id="nxt"></canvas>
+        <h2>NEXT<br>BLOCK</h2>
+      </li>
+    </ul>
+      
+    <div id="texts">
+    </div>
+    <div id="ctrl">
+      <p>PRESS [Space key]....GAME START OR STOP</p>
+      <p>PRESS [Left key].....MOVE LEFT</p>
+      <p>PRESS [Right key]....MOVE RIGHT</p>
+      <p>PRESS [Up key].......MOVE BOTTOM</p> 
+      <p>PRESS [Down key].....MOVE UNDER</p>
+      <p>PRESS [A]............ROLLING LEFT</p>
+      <p>PRESS [D]............ROLLING RIGHT</p>
+      <p>PRESS [S]............EXCHANGE BLOCK(TO HOLDING BOX)</p>
+    </div>
+  </main>
+
+  <script src="js/tetris.js"></script>
+
+</body>
+</html>

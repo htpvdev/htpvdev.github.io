@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+    <a href="./index.html">テトリスのページ</a>
+
+    <div id="entry">
+        <p>あなたの名前を入力してください</p>
+        <input type="text" placeholder="名前を入力" id="input_name">
+        <button id="input_btn">確定</button>
+    </div>
+
+    <div id="welcome">
+        <p id="welcome_text"></p>
+        <p>年齢を入力してください</p>
+        <input type="text" placeholder="年齢を入力" id="input_age">
+        <button id="age_input_btn">年齢を送信</button>
+    </div>
+
+    <p id="age_text"></p>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $('#welcome').hide()
+            // $('#welcome').hide()
+        })
+
+        $('#input_btn').on('click', function() {
+            $('#entry').hide()
+            const welcomeText = 'ようこそ、' + $('#input_name').val() + 'さん！'
+            console.log(welcomeText)
+            $('#welcome_text').html(welcomeText)
+            $('#welcome').show()
+        })
+
+        $('#age_input_btn').on('click', function() {
+            $('#welcome').hide()
+
+            const userAge = $('#input_age').val()
+
+            // ユーザーの年齢が20才未満の場合は、販売ページに案内しない
+            if ( userAge >= 20 ) {
+                // 処理
+                $('#age_text').html('へいらっしゃい！')
+            } else if (userAge < 20) {
+                // 処理
+                $('#age_text').html('ここはガキの来る場所じゃあないんだよ！家に帰ってママのおっぱいでも吸ってな！このしょんべんたれが！！')
+            } else {
+                // それ以外（ユーザーの年齢の入力欄に数字以外が入力された場合）
+                $('#age_text').html('年齢を入力しろといったよなぁ！？日本語が読めないノキア！？家に帰ってママのおっぱいでも吸ってな！このしょんべんたれが！！')
+            }
+        })
+    </script>
+</body>
+</html>
