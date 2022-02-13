@@ -4,9 +4,13 @@
 
 <https://htpvdev.github.io>
 
+<br>
+
 ## 制作経緯
 
 先輩社員さんからGitHub Pages をおすすめされたので、自らの学習用に始めた。  
+
+<br>
 
 ## GitHub Pages について（備忘録）
 
@@ -23,11 +27,11 @@ SettingのタブにPageがあるので、そこから編集する。
 ### 概要
 こちらのページでテトリスがプレイできます。
 
-<https://htpvdev.github.io/tetris/>
+<https://htpvdev.github.io/V2/tetris/>
 
 <br>
 
-JavaScript学習1ヶ月目に作成。YouTubeで公開されたコードを写経しただけだが、大変勉強になった。  
+JavaScript学習1ヶ月目に作成。YouTubeで公開されているコードを写経しただけだが、大変勉強になった。  
 その後、テトリミノ保持機能や、次のテトリミノが見える機能、スコア機能、一時停止などの機能を取り付けた。  
 
 <br>
@@ -59,4 +63,14 @@ JavaScript学習1ヶ月目に作成。YouTubeで公開されたコードを写�
 
 N乗根に対応しようかな？
 
+## ログ
+
+- 2022/1/31 リポジトリ作成
+
 ## Tips
+
+### 以下より、SE関連の知識を、雑多にメモしていきます。
+
+SPAとは？  
+Single Page Application の略。単一のページから遷移することなく様々な機能を果たせるもの。Reactとかで実装される？(GmailやFaceBookなど)
+
