@@ -1,5 +1,8 @@
-# 1年目プログラマーのアウトプット用リポジトリ
+# ポートフォリオ
 
+## 自己紹介
+
+Webアプリ開発経験2年目SEです！
 簡単なJavaScript等の制作物をこちらのページで公開させていただきます。ご意見コメントいただいたら嬉しすぎて泣きます！！
 
 <https://htpvdev.github.io>
@@ -20,6 +23,37 @@ SettingのタブにPageがあるので、そこから編集する。
 また、デフォルトでREADME.mdがルートURLに表示されてしまうので、README.mdを.github/README.mdへ移動する。
 
 <br>
+
+## React 環境について
+
+この GitHub Page はReactアプリケーションで作成されている。ただ、GitHub Pageには静的ファイルしか置けない(Node.jsを実行できない)ので、デプロイするために以下の操作を行い、ビルド後のファイル(webpackでモジュールバインドされた後のファイル)を生成した。
+
+### React開発環境構築
+
+Node.jsのバージョン管理ツール「Volta」を利用した。そのため、voltaコマンドも使用している。
+
+1. 以下のコマンドを順に実行
+- voltaコマンドで、最新のNode.jsとnpmをインストール
+- `volta install node@latest`
+- `volta install npm@latest`
+- volta pin コマンドで、package.jsonに、このプロジェクトで利用するNode.js/npmのバージョンを固定する
+- `volta pin node@latest`
+- `volta pin npm@latest`
+- create-react-appコマンドを利用してReactアプリケーションをインストールする(TypeScript)
+- `npm i -g create-react-app`
+- `npx create-react-app my-app --template typescript`
+
+2. 作成したアプリを、静的ファイルにビルドする
+- アプリのURL(%PUBLIC_URL%)を設定する必要がある
+- package.jsonに、homepageという名前のプロパティを追加して、"https://htpvdev.github.io/react-reversi"という値を設定
+- `npm run build`を実行
+
+## コンテンツ
+
+## React ゲーム
+
+今はオセロだけだが、チェスや将棋なども作りたい  
+プレイヤー同士の対戦機能も実装したい
 
 ## TETRIS
 <br>

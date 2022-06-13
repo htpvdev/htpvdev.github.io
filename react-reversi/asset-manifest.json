@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-reversi/static/css/main.085ec076.css",
+    "main.js": "/react-reversi/static/js/main.1058f758.js",
+    "static/js/787.e3449796.chunk.js": "/react-reversi/static/js/787.e3449796.chunk.js",
+    "index.html": "/react-reversi/index.html",
+    "main.085ec076.css.map": "/react-reversi/static/css/main.085ec076.css.map",
+    "main.1058f758.js.map": "/react-reversi/static/js/main.1058f758.js.map",
+    "787.e3449796.chunk.js.map": "/react-reversi/static/js/787.e3449796.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.085ec076.css",
+    "static/js/main.1058f758.js"
+  ]
+}
