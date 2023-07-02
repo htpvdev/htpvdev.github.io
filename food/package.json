@@ -32,5 +32,5 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
   },
-  "homepage": "https://htpvdev.github.io/food"
+  "homepage": "https://htpvdev.github.io/food/dist"
 }

@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-import { Accordion, AccordionDetails, AccordionSummary, Button, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Button, List, ListItem, TextField, Typography } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
+import CloseIcon from '@mui/icons-material/Close';
 
 const initialFoodList = [
   'ラーメン',
@@ -28,12 +29,25 @@ const initialFoodList = [
 ]
 
 function App() {
-  const [foodList] = useState(initialFoodList)
+  const [foodList, setFoodList] = useState(initialFoodList)
   const [selectedFood, setSelectedFood] = useState('なんじゃろな?')
+  const inputRef = useRef<HTMLInputElement>()
 
   const chooseFood = () => {
     const num = Math.floor(Math.random() * foodList.length)
     setSelectedFood(foodList[num])
+  }
+
+  const onClickDeleteButton = (food: string) => {
+    setFoodList(foodList => foodList.filter(f => f !== food))
+  }
+
+  const addFood = () => {
+    const newFood = inputRef.current?.value ?? 'エラー飯'
+    if (inputRef.current) {
+      inputRef.current.value = ''
+    }
+    setFoodList(foodList => [ ...foodList, newFood])
   }
 
   return (
@@ -51,6 +65,11 @@ function App() {
       >
         ルーレットスタート
       </Button>
+      <Divider />
+
+      <TextField inputRef={inputRef} size='small' label="新規飯追加" variant="outlined" />
+      <Button onClick={addFood} variant='contained'>追加</Button>
+
       <Accordion defaultExpanded sx={{ p: 2 }}>
       <AccordionSummary
         expandIcon={<ExpandMore />}
@@ -61,43 +80,20 @@ function App() {
       </AccordionSummary>
       <AccordionDetails>
           <Divider />
-          {foodList.map(food => {
-            return <><Typography>{food}</Typography><Divider /></>
-          })}
+          <List>
+            {foodList.map(food => {
+              return (
+                <ListItem divider key={food}>
+                  <Typography sx={{ mr: 'auto' }}>{ food }</Typography>
+                  <Button onClick={() => onClickDeleteButton(food)}><CloseIcon /></Button>
+                </ListItem>
+              )
+            })}
+          </List>
       </AccordionDetails>
     </Accordion>
     </Box>
   )
 }
-
-// const rows = [
-//   { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-//   { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-//   { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-//   { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-//   { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-//   { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-//   { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-//   { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-//   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-// ];
-
-// export default function DataTable() {
-//   return (
-//     <div style={{ height: 400, width: '100%' }}>
-//       <DataGrid
-//         rows={rows}
-//         columns={columns}
-//         initialState={{
-//           pagination: {
-//             paginationModel: { page: 0, pageSize: 5 },
-//           },
-//         }}
-//         pageSizeOptions={[5, 10]}
-//         checkboxSelection
-//       />
-//     </div>
-//   );
-// }
 
 export default App
