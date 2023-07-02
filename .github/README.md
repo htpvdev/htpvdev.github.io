@@ -45,7 +45,7 @@ Node.jsのバージョン管理ツール「Volta」を利用した。そのた�
 
 2. 作成したアプリを、静的ファイルにビルドする
 - アプリのURL(%PUBLIC_URL%)を設定する必要がある
-- package.jsonに、homepageという名前のプロパティを追加して、"https://htpvdev.github.io/react-reversi"という値を設定
+- package.jsonに、homepageという名前のプロパティを追加して、`https://htpvdev.github.io/react-reversi` という値を設定
 - `npm run build`を実行
 
 ## コンテンツ
