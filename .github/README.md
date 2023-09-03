@@ -61,7 +61,7 @@ Node.jsのバージョン管理ツール「Volta」を利用した。そのた�
 ### 概要
 こちらのページでテトリスがプレイできます。
 
-<https://htpvdev.github.io/content/tetris/V2/>
+<https://htpvdev.github.io/contents/tetris/V2/>
 
 <br>
 
@@ -83,7 +83,7 @@ JavaScript学習1ヶ月目に作成。YouTubeで公開されているコード�
 
 こちらのページです。
 
-<https://htpvdev.github.io/content/square/>
+<https://htpvdev.github.io/contents/square/>
 
 <br>
 
