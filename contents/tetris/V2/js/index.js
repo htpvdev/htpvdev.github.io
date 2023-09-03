@@ -514,7 +514,6 @@ function drawFutureField()
     state.dropTetroTypes.push(tetroType)
   }
 
-  let tetroType;
   for (let y = 0; y < FUTURE_FIELD_ROW; y++) {
     // 上から（直近のテトリミノから）描画していく
     tetroType = state.dropTetroTypes[(Math.floor(y / TETRO_SIZE) + 1)]
