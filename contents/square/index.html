@@ -20,6 +20,6 @@
   <br>
   <p>javascript:var squareAnswer%3Dfunction(squareOrigin)%7Bif(isNaN(Number(squareOrigin)))return '整数以外の文字列が入力されました。'%3Bif(Number(squareOrigin)%3D%3D%3D0)return '0の二乗根は0です'%3Blet square%3DMath.abs(squareOrigin)%3Bconst splitObj%3D%7B%7D%3Bfor(i%3D2%3Bi>0%3Bi%2B%2B)%7Bif(i>square)%7Bif(square!%3D%3D1)splitObj%5Bsquare%5D%2B%2B%3Bbreak%3B%7Delse if(square%25i%3D%3D%3D0)%7Bsquare%3Dsquare%2Fi%3Bif(typeof splitObj%5Bi%5D!%3D%3D'undefined')%7BsplitObj%5Bi%5D%2B%2B%3B%7Delse%7BsplitObj%5Bi%5D%3D1%3B%7Di%3D1%3B%7D%7Dlet route%3D1%3Blet muriNumber%3D1%3Bfor(const splittedNumber in splitObj)%7Broute*%3D(splittedNumber**(Math.floor(splitObj%5BsplittedNumber%5D%2F2)))%3Bif(splitObj%5BsplittedNumber%5D%252%3D%3D%3D1)muriNumber*%3DsplittedNumber%3B%7Dconst resultRoute%3D(route%3D%3D%3D1%3F''%3AString(route))%2B(Number(squareOrigin)&lt;0%3F'i'%3A'')%2B(muriNumber%3D%3D%3D1%3F''%3A'ルート'%2BmuriNumber)%3Breturn %60 %5B %24%7BsquareOrigin%7D%5D の2乗根は %5B %24%7BresultRoute%7D%5D です。%60%3B%7D%3Bvar inputNumber%3Dprompt('2乗根を求めます。値を入力してください。')%3Bif(inputNumber !%3D%3Dnull)alert(squareAnswer(inputNumber))%3Bvoid(0);</p>
 
-  <script src="./js/square.js"></script>
+  <script src="https://htpvdev.github.io/contents/square/js/square.js"></script>
 </body>
 </html>

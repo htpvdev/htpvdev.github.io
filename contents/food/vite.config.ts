@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "https://htpvdev.github.io/food/dist",
+  base: "https://htpvdev.github.io/config/food/dist",
   plugins: [react()],
 })
